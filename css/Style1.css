@@ -3,26 +3,74 @@
         margin: 0;
         padding: 0;
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        box-sizing: border-box;
     }
-   
-    .home_background{
-        background-color: #c6f8fd;
-        background-image: url("../Imgs/HomeBackGround.JPG")
+    hr {
+        display: block;
+        margin-top: 8em;
+        margin-bottom: -5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 1px;
+      }
+    #HomePage{
+        background: url(../Imgs/HomeBackGround.JPG);
+        background-repeat: no-repeat;
         background-size: cover;
-        background-repeat:no-repeat;
-        color:white
-        height: 100vh;
-    }
-    .workout_background{
+        height:100vh;
 
-        background-image: url(../css/.workout_background);
-        background-size: cover;
-        background-repeat:no-repeat;
-        height: 100vh;
     }
-    .statistic_background{
-        background-image: url(../css/.statistic_background);
+    #StatPage{
+        background: url(../Imgs/StatisticBackGround.jpg);
+        background-repeat: no-repeat;
         background-size: cover;
-        background-repeat:no-repeat;
-        height: 100vh;
+        height:100vh;
+
     }
+    #WorkoutPage{
+        background: url(../Imgs/WorkoutBackGround.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height:100vh;
+
+    }
+    .hero {
+        font-weight: bold;  
+        width: 100%;
+        height:100vh;
+        font-size: 20px;
+        display:flex;
+        justify-content: left;
+        align-items: left;
+        padding: 0 5%;
+        position: relative;
+    }
+   nav{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    padding: 40px 20%;
+    display:flex;
+    justify-content:left;
+   }
+
+   nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 100px;
+
+   }
+   nav ul li a {
+    text-decoration: none;
+    color:black
+   
+   }
+
+
+
+   
+
+   
+  

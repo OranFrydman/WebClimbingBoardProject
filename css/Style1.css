@@ -14,6 +14,12 @@
         border-style: inset;
         border-width: 1px;
       }
+      img {
+
+        height: auto;
+        max-width: 100%;
+      
+      }
     #HomePage{
         background: url(../Imgs/HomeBackGround.JPG);
         background-repeat: no-repeat;
@@ -68,7 +74,14 @@
    
    }
 
-
+.Device{
+    text-align: center;
+    background-image: none;
+    margin-bottom: 20em;
+    margin-top: -40em;
+    background-size: 100% 100%;
+   
+}
 
    
 

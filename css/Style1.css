@@ -1,4 +1,7 @@
 
+:root{
+    --Purple1:#9a0cdb;
+}
     *{
         margin: 0;
         padding: 0;
@@ -34,13 +37,7 @@
         height:100vh;
 
     }
-    #WorkoutPage{
-        background: url(../Imgs/WorkoutBackGround.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height:100vh;
 
-    }
     .hero {
         font-weight: bold;  
         width: 100%;
@@ -74,18 +71,58 @@
    
    }
 
-.Device{
-    text-align: center;
-    background-image: none;
-    margin-bottom: 20em;
-    margin-top: -40em;
-    background-size: 100% 100%;
-   
-}
 
-  .Login {
-    color:rgb(248, 11, 157)
+  .Forms {
+    color:rgb(253, 115, 221)
+    
   }
 
-   
+
   
+  a {
+    position: relative;
+  }
+  
+  a::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      border-radius: 2px;
+      background-color: #18272F;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+    }
+  
+  a:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+/* WORKOUT PAGE*/
+#WorkoutPage{
+    background: url(../Imgs/WorkoutBackGround.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:100vh;
+
+}
+
+#DeviceHangBoard{
+   
+    background-image: none;
+    width:200vh;
+    height:100vh;
+  
+    margin-top: -60em;
+    background-size: 100% 100%;
+}
+
+#Finger2{
+    right:20%;
+    
+}
+

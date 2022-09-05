@@ -23,6 +23,7 @@
         max-width: 100%;
       
       }
+      /* Home Page*/
     #HomePage{
         background: url(../Imgs/HomeBackGround.JPG);
         background-repeat: no-repeat;
@@ -30,6 +31,47 @@
         height:100vh;
 
     }
+    /* Container Grid */
+    
+#container
+{
+display: grid;
+grid-template-areas: 
+'Header Header Header'
+'About LoginPage RegisterPage '
+;
+}
+.GridSettings{
+    border-style: solid;
+    border-radius: 25px;
+    margin: 1px;
+    padding: 5px;
+    font-size: 20px;
+}
+#Header {
+    grid-area: Header;
+    height: 10vh;
+    
+}
+#About {
+    grid-area: About;
+    height: 30vh;
+    margin-top: 30em;
+    
+}
+
+#RegisterPage {
+    grid-area: RegisterPage;
+    height: 50vh;
+    margin-top: 13em;
+
+}
+#LoginPage {
+  grid-area: LoginPage;
+  height: 40vh;
+  margin-top: 22em;
+
+}
     #StatPage{
         background: url(../Imgs/StatisticBackGround.jpg);
         background-repeat: no-repeat;
@@ -125,4 +167,6 @@
     right:20%;
     
 }
+
+
 

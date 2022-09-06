@@ -8,15 +8,82 @@
     <title>ClimbingBoard</title>
 </head>
 <body id="StatPage">
-    <div class="hero">
-        <nav>
+    <div id="containerStat">
+        <div class="GridSettings" id="Header">
+            <div class="hero">
+                <nav>
+                    <ul class="StatsItems">
+                        <li><a href="HomePage.html">Sign out</a></li>
+                        <li><a href="HomePage.html">Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div id="LetsGo">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <a href="./Workout.html">
+                        <img src="/Imgs/LetsGo.png" alt="LetsGo">
+                     </a>
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+       
+            <div id="Table">
+                <table class="HistoryClimb">
+                    <thead>
+                        <tr>
+                        <th>When</th>
+                        <th>Duration</th>
+                        <th>Level</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12/08/22</td>
+                            <td>2:36</td>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <td>16/08/22</td>
+                            <td>2:31</td>
+                            <td>Easy</td>
+                        </tr>
+                        <tr>
+                            <td>19/08/22</td>
+                            <td>2:31</td>
+                            <td>Easy</td>
+                        </tr>
+                    </tbody>
+                </table>
+             </div>
+        <div class="GridSettings" id="Filters"> 
+            <div class="FilterText">
+                <h2>Filters</h2>
+                <div class="input-group">
+                    <span class="input-group-text">From</span>
+                    <input type="date" class="form-control"/>
+                    <span class="input-group-text">To</span>
+                    <input type="date" class="form-control"/>
+                </div>
+            </div>
+                <input type="checkbox" id="EasyFilter" name="EasyFilter" value="EF">
+                <label for="LevelFilter"> Easy</label><br>
+                <input type="checkbox" id="MediumFilter" name="MediumFilter" value="MF">
+                <label for="LevelFilter"> Hard</label><br>
+                <input type="checkbox" id="HardFilter" name="HardFilter" value="HF">
+                <label for="LevelFilter"> Medium</label><br>
+                <img id="FilterLogo" src="/Imgs/FilterLogo.png" alt="FilterLogo">
             
-            <ul class="StatItems">
-                <li><a href="HomePage.html">Sign out</a></li>
-                <li><a href="HomePage.html">Home</a></li>
-            </ul>
-        </nav>
-    </div>
+
+            
+        </div>
+        <div class="GridSettings" id="GraphCount">Graph Count By Levels</div>
+        <div class="GridSettings" id="GraphResults"> Graph Results </div>  
+    </div> 
 </body>
 
 </html>

@@ -6,24 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClimbingBoard</title>
+    <script defer src="/JS/JScodes.js"></script>
+    
 </head>
 <body id="WorkoutPage">
-    <div class="hero">
-        <nav>
-            <ul class="WorkoutItems">
-                <li><a href="HomePage.html">Sign out</a></li>
-                <li><a href="HomePage.html">Home</a></li>
-                <li><a href="Statistics.html">My Climbs</a></li>
-            </ul>
-        </nav>
-    </div>
     <div class="HangBoard">
-        <div class="Device">
-            <img src="../Imgs/FingerBoardAlpineStylePic.png" alt="HangBoardPhoto"  id="DeviceHangBoard">
-            <img src="../Imgs/2FingersHold.png" alt="HangBoardPhoto"  id="Finger2">
-        </div>
-            
+        <div id="containerWorkOut">
+            <div class="GridSettings" id="Header">
+                <div class="hero">
+                    <nav>
+                        <ul class="WorkoutItems">
+                            <span id="time"></span>
+                            <li><a href="HomePage.html">Sign out</a></li>
+                            <li><a href="HomePage.html">Home</a></li>
+                            <li><a href="Statistics.html">My Climbs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div id="Grades">
+                <button class="DiffGrades" id="Easy">  Easy  </button>
+                <button class="DiffGrades"  id="Medium">Medium</button>
+                <button class="DiffGrades"  id="Hard">  Hard </button>
+            </div>
+            <div id="Time">
+                <div id="mainstopwatch">
+                    <div class="mainTime">
+                         <span id="mainminute">00</span>
+                         <span id="mainsecond">00</span>
+                    </div>
+                    
+                    <button type="button" id="stop" onclick="stop();">Stop</button>
+               </div>
+            </div>
+            <div  id="Device"> 
+                <img src="../Imgs/FingerBoardAlpineStylePic.png" alt="HangBoardPhoto"  id="DeviceHangBoard">
+                <img src="../Imgs/2FingersHold.png" alt="HangBoardPhoto"  id="Finger2">
+            </div>
+            <div  id="StartStop"> 
+                <button type="button" id="StartStopButton" onclick=start()> StartClimbing </button> 
+                <button type="button" id="reset" onclick=reset()> Reset Clock </button> 
+                
+                
+            </div>  
+        </div>  
     </div>
+    
 </body>
 
 </html>

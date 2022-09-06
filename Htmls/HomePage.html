@@ -6,79 +6,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClimbingBoard</title>
+    <script defer src="/JS/JScodes.js"></script>
 </head>
 <body id="HomePage">
+
     <div id="container">
         <div class="GridSettings" id="Header">
             <div class="hero">
                 <nav>
                     <ul class="HomeItems">
+                        <span id="time"></span>
                         <li><a href="#">Sign in</a></li>
                         <li><a href="#">Register</a></li>
                         <li><a href="#">About us</a></li>
-                        <li><a href="Statistics.html">My Climbs</a></li>
+                        <li><a href="Statistics.html">My Climbs</a></li> 
                     </ul>
                 </nav>
             </div>
         </div>
-        <div class="GridSettings" id="About">Bla Bla Short Description</div>
-        <div class="GridSettings" id="LoginPage">
-            <div class="Login">
-                <h1>Login</h1>
-                <form action="" method="">
-                  
-                    <label for="UserEmail">enter email</label>
-                    <input type="email" name="UserEmail" id="UserEmail">  <br>
-                    <label for="Password">enter Password</label>
-                    <input type="password" name="Password" id="Password">  <br>
-                    <input type="button" id="Register" value="Register"/>  
-                </form>
-                <br><br><br>
-                    </div>
-        </div>
-        <div class="GridSettings" id="RegisterPage">
-            <div class="Forms" >
-                <div class="Register">
-           <h1>Register</h1>
-           <form action="" method="">
-             
-               <label for="FullName">enter full name</label>
-               <input type="text" name="FullName" id="FullName">  <br>
-               <label for="UserEmail">enter email</label>
-               <input type="email" name="UserEmail" id="UserEmail">  <br>
-               <label for="Password">enter Password</label>
-               <input type="password" name="Password" id="Password">  <br>
-               <label for="GradeList">   
-                   Climbing Grade :  
-                   </label>   
-                   <select id="GradeList" name="GradeList">  
-                   <option value="6A">6a</option>  
-                   <option value="6b">6b</option>  
-                   <option value="6C">6c</option>  
-                   <option value="7A">7a</option>  
-                   <option value="7B">7b</option>  
-                   <option value="7C">7c</option>  
-                   <option value="8A">8a</option>  
-                   </select>  
-                     
-                   <br>
-                   <label for="HoldList">   
-                       Max Strength holds :  
-                       </label>   
-                       <select id="HoldList" name="HoldList">  
-                       <option value="Crimp">Crimp</option>  
-                       <option value="Pocket">Pocket</option>  
-                       <option value="Sloper">Sloper</option>
-                       </select> <br>
-                       <input type="button" id="Register" value="Register"/>  
-           </form>
-           <br><br><br>
-               </div>
-        </div>
         
+        <div id="LetsGo">
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <a href="./Workout.html">
+                        <img src="/Imgs/LetsGo.png" alt="LetsGo">
+                     </a>
+                    
+                  </div>
+                </div>
+              </div>
+        </div>
+       
+        
+        <div class="GridSettings" id="About">
+            <div class="close-btn">&times;</div>
+            <br>
+            <h2>Hello There!</h2>
+            <div>I am a student from Ben Gurion University with passion for rock climbing </div>
+            <div>I decided to take the HangBoard application one step up and create my own Endurance trainer.</div>
+
+            <div>This Application had been developed as part of Web Development Course during Summer 2022.</div>
+            <div>During covid and in general students can't go outdoors.</div>
+            <div>ClimbingBoard is an application who provides unknown suprising and challanging in-home climbing. </div>
+            <div>Cannot be compared to climbing outdoor but simulates an On-Sight burn in the crag.</div>
+            <div>I hope you use it when you cant go outdoors and preapre for your next project.</div>
+        </div>
+        <div class="GridSettings" id="LoginPage">
+            <div class="popup">
+                <div class="close-btn">&times;</div>
+                    <div class="Forms"> 
+                        <h2>Login</h2>
+                        <form action="" method="">
+                            <label for="UserEmail">enter email</label>
+                            <input type="email" name="UserEmail" id="UserEmail">  <br>
+                            <label for="Password">enter Password</label>
+                            <input type="password" name="Password" id="Password">  <br>
+                            <input type="button" id="Register" value="Login"/>  
+                        </form>
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
+        <div class="GridSettings" id="RegisterPage">
+            <div class="close-btn">&times;</div>
+                <div class="Forms" >
+                    <div class="Register">
+                        <h2>Register</h2>
+                        <form action="" method="">
+                            <label for="FullName">enter full name</label>
+                            <input type="text" name="FullName" id="FullName">  <br>
+                            <label for="UserEmail">enter email</label>
+                            <input type="email" name="UserEmail" id="UserEmail">  <br>
+                            <label for="Password">enter Password</label>
+                            <input type="password" name="Password" id="Password">  <br> 
+                            <input type="button" id="Register" value="Register"/> 
+                        </form>
+                        <br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+             
+            
   
   
+    
 
 </body>
 

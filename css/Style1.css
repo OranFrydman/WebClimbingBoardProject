@@ -1,28 +1,93 @@
-
+*
+{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
 :root{
     --Purple1:#9a0cdb;
+    --FormColor1:rgba(237,184,121,0.4);
+    --GreenButton:#04AA6D;
+    --GreyButton:#a7a7a7;
+   
 }
-    *{
-        margin: 0;
-        padding: 0;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-        box-sizing: border-box;
-    }
-    hr {
-        display: block;
-        margin-top: 8em;
-        margin-bottom: -5em;
-        margin-left: auto;
-        margin-right: auto;
-        border-style: inset;
-        border-width: 1px;
-      }
+
+a {
+  position: relative;
+  }
+nav{
+width: 100%;
+position: absolute;
+top:0;
+left:0;
+padding: 10 5%;
+display:flex;
+justify-content:left;
+font-size: 20px;
+}
+nav ul li {
+list-style: none;
+display: inline-block;
+
+padding-left: 20px;
+
+}
+nav ul li a {
+text-decoration: none;
+color:black
+
+}
+.Forms {
+color:black;
+}
+.hero {
+  justify-content: left;
+  align-items: left;
+  padding: 0 5%;
+  position: relative;
+}
+
+ul li a::before {
+content: '';
+position: absolute;
+width: 100%;
+height: 3px;
+border-radius: 2px;
+background-color: #18272F;
+bottom: 0;
+left: 0;
+transform-origin: right;
+transform: scaleX(0);
+transition: transform .3s ease-in-out;
+}
+
+a:hover::before {
+transform-origin: left;
+transform: scaleX(1);
+}
+  
+div h2{
+  text-decoration: underline ;
+  text-align: center;
+}
       img {
 
         height: auto;
         max-width: 100%;
       
       }
+      input[type="button"], input[type="submit"] { 
+        padding:10px 20px;
+        font-size:15px;
+        font-weight:600;
+        color:#222
+     
+    } 
+    input ,select{
+      border-radius: 25px;
+      border: black solid 0.5px;
+      line-height: 2em;
+      
+    }
+
       /* Home Page*/
     #HomePage{
         background: url(../Imgs/HomeBackGround.JPG);
@@ -31,22 +96,37 @@
         height:100vh;
 
     }
+    #LetsGo{
+     
+    width: 250px;
+    margin-top: 20px;
+    
+
+  }
+  #LetsGoImg:hover {
+    width:80%;
+    margin-top: 40px;
+    margin-right: 40px;
+  }
     /* Container Grid */
     
 #container
 {
 display: grid;
 grid-template-areas: 
-'Header Header Header'
-'About LoginPage RegisterPage '
+'Header Header  LetsGo'
+'About RegisterPage LoginPage  '
 ;
 }
 .GridSettings{
     border-style: solid;
     border-radius: 25px;
-    margin: 1px;
+    margin: 60px;
     padding: 5px;
-    font-size: 20px;
+    font-size: 15px;
+    background:var(--FormColor1);
+    line-height: 2;
+    font-weight: bold;
 }
 #Header {
     grid-area: Header;
@@ -55,24 +135,25 @@ grid-template-areas:
 }
 #About {
     grid-area: About;
-    height: 30vh;
-    margin-top: 30em;
+    height: 70vh;
+    margin-top: 6em;
+    line-height: 1.4;
+    
     
 }
-
 #RegisterPage {
-    grid-area: RegisterPage;
-    height: 50vh;
-    margin-top: 13em;
+  grid-area: RegisterPage;
+  height: 50vh;
+  margin-top: 10em;
 
 }
 #LoginPage {
   grid-area: LoginPage;
-  height: 40vh;
-  margin-top: 22em;
+  height: 70vh;
+  margin-top: 6em;
 
 }
-    #StatPage{
+#StatPage{
         background: url(../Imgs/StatisticBackGround.jpg);
         background-repeat: no-repeat;
         background-size: cover;
@@ -80,69 +161,27 @@ grid-template-areas:
 
     }
 
-    .hero {
-        font-weight: bold;  
-        width: 100%;
-        height:100vh;
-        font-size: 20px;
-        display:flex;
-        justify-content: left;
-        align-items: left;
-        padding: 0 5%;
-        position: relative;
-    }
-   nav{
-    width: 100%;
-    position: absolute;
-    top:0;
-    left:0;
-    padding: 40px 20%;
-    display:flex;
-    justify-content:left;
-   }
-
-   nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 100px;
-
-   }
-   nav ul li a {
-    text-decoration: none;
-    color:black
-   
-   }
+/* The flip box container */
+.flip-box {
+  perspective: 1000px; /*  3D effect */
+}
 
 
-  .Forms {
-    color:rgb(253, 115, 221)
-    
-  }
+.flip-box-inner {
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+}
 
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(360deg);
+}
 
-  
-  a {
-    position: relative;
-  }
-  
-  a::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 3px;
-      border-radius: 2px;
-      background-color: #18272F;
-      bottom: 0;
-      left: 0;
-      transform-origin: right;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
-    }
-  
-  a:hover::before {
-    transform-origin: left;
-    transform: scaleX(1);
-  }
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
 
 /* WORKOUT PAGE*/
 #WorkoutPage{
@@ -152,21 +191,172 @@ grid-template-areas:
     height:100vh;
 
 }
+#containerWorkOut
+{
+display: grid;
+grid-template-areas: 
+'Header Header Header'
+'Grades Grades Time '
+'Device Device Device'
+'StartStop StartStop StartStop'
+;
 
-#DeviceHangBoard{
-   
-    background-image: none;
-    width:200vh;
-    height:100vh;
+}
+/* Grid Workout*/
+
+#Grades {
+  grid-area: Grades;
+  height: 10vh;
+  text-align: center;
+
+}
+#Time {
+  grid-area: Time;
+  height: 10vh;
+  font-size: 30px;;
+}
+#Device {
+  grid-area: Device;
+  height: 60vh;
+  text-align:center
+}
+#StartStop {
+  grid-area: StartStop;
+  height: 10vh;
+  text-align:center
+ 
+}
+/*Grades Styling*/
+.DiffGrades{
+  background-image: linear-gradient(160deg, Gray, white);
+  border: black 1px solid;
+  padding: 20px;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  width: 100px;
+  margin-right: 3%;
   
-    margin-top: -60em;
-    background-size: 100% 100%;
 }
 
-#Finger2{
-    right:20%;
-    
+#StartStopButton
+{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 1px solid Black;
+  background-image: linear-gradient(30deg, lightgreen, white); 
+  
 }
+#reset{
+  height: 40px;
+  width: 100px;
+  border-radius: 5%;
+  border: 1px solid Black;
+  background-image: linear-gradient(30deg, Yellow, white); 
+  position: relative;
+  left:25%;
+}
+
+
+/*HangBoardStyling*/
+#DeviceHangBoard{
+  transform: rotate(0.6deg);
+  
+}
+
+
+/*Stats Page*/
+#containerStat
+{
+display: grid;
+grid-template-areas: 
+'Header Header LetsGo'
+'Table Table Filters '
+'GraphCount GraphResults Filters'
+;
+
+}
+/* Grid Workout*/
+
+#Table {
+  grid-area: Table;
+  height: 40vh;
+  position:relative;
+  left: 30%;
+  
+ 
+
+}
+#Filters {
+  grid-area: Filters;
+  height: 50vh;
+  width: 40vh;
+  border: black solid 1px;
+  margin-top :28%;
+ 
+}
+#FilterLogo{
+  width: 30%;
+  position:relative;
+  left:50%;
+  top:-20%;
+  
+}
+.input-group
+{
+  display:grid;
+  word-spacing: 12px;
+}
+#unified-inputs.input-group { width: 100%; }
+#unified-inputs.input-group input { width: 50% !important; }
+#unified-inputs.input-group input:last-of-type { border-left: 0; }
+#GraphCount {
+  grid-area: GraphCount;
+  height: 30vh;
+  text-align:center;
+  border: black solid 1px;
+  
+}
+#GraphResults {
+  grid-area: GraphResults;
+  height: 30vh;
+  border: black solid 1px;
+ 
+ 
+}
+/* Style Table*/
+
+.HistoryClimb {
+  border-collapse: collapse;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 30px black;
+ 
+  
+  
+}
+.HistoryClimb thead tr {
+  background-color: green;
+  color: White;
+  text-align: left;
+}
+
+.HistoryClimb th,.HistoryClimb td {
+    padding: 12px 15px;
+}
+.HistoryClimb tbody tr {
+  border-bottom: 1px solid White;
+}
+
+.HistoryClimb tbody tr:nth-of-type(even) {
+  background-color: White;
+}
+
+.HistoryClimb tbody tr:last-of-type {
+  border-bottom: 2px solid green;
+}
+
 
 
 

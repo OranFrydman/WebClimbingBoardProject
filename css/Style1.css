@@ -1,50 +1,33 @@
 *
 {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+  
 }
+
 :root{
-    --Purple1:#9a0cdb;
     --FormColor1:rgba(237,184,121,0.4);
     --GreenButton:#04AA6D;
     --GreyButton:#a7a7a7;
-   
 }
+
 
 a {
   position: relative;
   }
 nav{
-width: 100%;
-position: absolute;
-top:0;
-left:0;
-padding: 10 5%;
-display:flex;
-justify-content:left;
-font-size: 20px;
+  font-size: 20px;
+  position: relative;
+    bottom: 20px;
 }
 nav ul li {
-list-style: none;
-display: inline-block;
-
+display: inline;
 padding-left: 20px;
 
 }
 nav ul li a {
 text-decoration: none;
 color:black
-
 }
-.Forms {
-color:black;
-}
-.hero {
-  justify-content: left;
-  align-items: left;
-  padding: 0 5%;
-  position: relative;
-}
-
 ul li a::before {
 content: '';
 position: absolute;
@@ -97,11 +80,8 @@ div h2{
 
     }
     #LetsGo{
-     
     width: 250px;
     margin-top: 20px;
-    
-
   }
   #LetsGoImg:hover {
     width:80%;
@@ -117,6 +97,7 @@ grid-template-areas:
 'Header Header  LetsGo'
 'About RegisterPage LoginPage  '
 ;
+
 }
 .GridSettings{
     border-style: solid;
@@ -130,7 +111,8 @@ grid-template-areas:
 }
 #Header {
     grid-area: Header;
-    height: 10vh;
+    height: 5vh;
+    
     
 }
 #About {
@@ -191,6 +173,7 @@ grid-template-areas:
     height:100vh;
 
 }
+
 #containerWorkOut
 {
 display: grid;
@@ -213,17 +196,23 @@ grid-template-areas:
 #Time {
   grid-area: Time;
   height: 10vh;
-  font-size: 30px;;
+  font-size: 50px;;
 }
 #Device {
   grid-area: Device;
   height: 60vh;
-  text-align:center
+  text-align:center;
+  background: url(../Imgs/FingerBoardAlpineStylePic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(0.6deg);
+
 }
 #StartStop {
   grid-area: StartStop;
   height: 10vh;
-  text-align:center
+  text-align:center;
+ 
  
 }
 /*Grades Styling*/
@@ -259,11 +248,7 @@ grid-template-areas:
 }
 
 
-/*HangBoardStyling*/
-#DeviceHangBoard{
-  transform: rotate(0.6deg);
-  
-}
+
 
 
 /*Stats Page*/
@@ -356,7 +341,5 @@ grid-template-areas:
 .HistoryClimb tbody tr:last-of-type {
   border-bottom: 2px solid green;
 }
-
-
 
 

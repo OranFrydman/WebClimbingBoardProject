@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="StyleSheet" href="../css/Style1.css">
+    <link rel="StyleSheet" href="../css/HangBoardStyle.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +18,7 @@
                     <nav>
                         <ul class="WorkoutItems">
                             <span id="time"></span>
-                            <li><a href="HomePage.html">Sign out</a></li>
+                            <li><a href="HomePage.html">Sign Out</a></li>
                             <li><a href="HomePage.html">Home</a></li>
                             <li><a href="Statistics.html">My Climbs</a></li>
                         </ul>
@@ -35,19 +36,43 @@
                          <span id="mainminute">00</span>
                          <span id="mainsecond">00</span>
                     </div>
-                    
-                    <button type="button" id="stop" onclick="stop();">Stop</button>
                </div>
             </div>
             <div  id="Device"> 
-                <img src="../Imgs/FingerBoardAlpineStylePic.png" alt="HangBoardPhoto"  id="DeviceHangBoard">
-                <img src="../Imgs/2FingersHold.png" alt="HangBoardPhoto"  id="Finger2">
+                <div id="containerDevice">
+                    <div class="holds" id="Air">Air</div>
+                  
+                    <div class="holds" id="H1"><img class="BigSquareImg" id="Img1" src="/Imgs/Square1.jpg" alt="H1">1</div>
+                    <div class="holds" id="H2"><img class="BigSquareImg" id="Img2"  src="/Imgs/Square1.jpg" alt="H2">2</div>
+                    <div class="holds" id="H3"><img class="SmallSquareImg" id="Img3" src="/Imgs/Square1.jpg" alt="H3">3</div>
+                    <div class="holds" id="H4"><img class="SmallSquareImg" id="Img4"  src="/Imgs/Square1.jpg" alt="H4">4</div>
+                    <div class="holds" id="H5"><img class="BigSquareImg" id="Img5"  src="/Imgs/Square1.jpg" alt="H5">5</div>
+                    <div class="holds" id="H6"><img class="BigSquareImg" id="Img6"  src="/Imgs/Square1.jpg" alt="H6">6</div>
+                    <div class="holds" id="H7"><img class="ThreeFingersImg" id="Img7"  src="/Imgs/2FingersHold.jpg" alt="H7">7</div>
+                    <div class="holds" id="H8"><img class="ThreeFingersImg" id="Img8"  src="/Imgs/2FingersHold.jpg" alt="H8">8</div>
+                    <div class="holds" id="H9"><img class="FingersImg" id="Img9"  src="/Imgs/34FingersHold.jpg" alt="H9">9</div>
+                    <div class="holds" id="H10"><img class="OneFingersImg" id="Img10" src="/Imgs/Mono.jpg" alt="H10">10</div>
+                    <div class="holds" id="H11"><img class="TwoFingersImg" id="Img11" src="/Imgs/2FingersHold.jpg" alt="H11">11</div>
+                    <div class="holds" id="H12"><img class="TwoFingersImg" id="Img12"  src="/Imgs/2FingersHold.jpg" alt="H12">12</div>
+                    <div class="holds" id="H13"><img class="FiveFingersImg" id="Img13"  src="/Imgs/34FingersHold.jpg" alt="H3">13</div>
+                    <div class="holds" id="H14"><img class="TwoFingersImg" id="Img14"  src="/Imgs/2FingersHold.jpg" alt="H14">14</div>
+                    <div class="holds" id="H15"><img class="TwoFingersImg" id="Img15"  src="/Imgs/2FingersHold.jpg" alt="H15">15</div>
+                    <div class="holds" id="H16"><img class="OneFingersImg" id="Img16" src="/Imgs/Mono.jpg" alt="H16">16</div>
+                    <div class="holds" id="H17"><img class="FingersImg" id="Img17"  src="/Imgs/34FingersHold.jpg" alt="H17">17</div>
+                    <div class="holds" id="H18"><img class="FingersImg" id="Img18"  src="/Imgs/34FingersHold.jpg" alt="H18">18</div>
+                    <div class="holds" id="H19"><img class="OneFingersImg" id="Img19"  src="/Imgs/Mono.jpg" alt="H19">19</div>
+                    <div class="holds" id="H20"><img class="TwoFingersImg" id="Img20"  src="/Imgs/2FingersHold.jpg" alt="H20">20</div>
+                    <div class="holds" id="H21"><img class="TwoFingersImg" id="Img21"  src="/Imgs/2FingersHold.jpg" alt="H21">21</div>
+                    <div class="holds" id="H22"><img class="FiveFingersImg" id="Img22"  src="/Imgs/34FingersHold.jpg" alt="H22">22</div>
+                    <div class="holds" id="H23"><img class="TwoFingersImg" id="Img23"  src="/Imgs/2FingersHold.jpg" alt="H23">23</div>
+                    <div class="holds" id="H24"><img class="TwoFingersImg" id="Img24"  src="/Imgs/2FingersHold.jpg" alt="H24">24</div>
+                    <div class="holds" id="H25"><img class="OneFingersImg" id="Img25" src="/Imgs/Mono.jpg" alt="H25">25</div>
+                    <div class="holds" id="H26"><img class="FingersImg" id="Img26"  src="/Imgs/34FingersHold.jpg" alt="H26">26</div>
+                </div>
             </div>
             <div  id="StartStop"> 
-                <button type="button" id="StartStopButton" onclick=start()> StartClimbing </button> 
-                <button type="button" id="reset" onclick=reset()> Reset Clock </button> 
-                
-                
+                <button type="button" id="StartStopButton">Start Climbing</button> 
+                <button type="button" id="reset"> Reset Clock </button> 
             </div>  
         </div>  
     </div>

@@ -19,6 +19,40 @@ grid-template-areas:
 ;
 
 }
+.holds{
+    visibility: hidden;
+    
+}
+.OneFingersImg{
+    width: 80%;
+    background-color: black;
+}
+.TwoFingersImg{
+    width: 90%;
+    background-color: black;
+}
+.ThreeFingersImg{
+    width: 100%;
+    background-color: black;
+}
+.SmallSquareImg{
+    position: relative;
+    height: 150%;
+    width: 100%;
+    background-color: black;
+    
+   
+  }
+  .FiveFingersImg{
+    background-color: black;
+  }
+  .BigSquareImg
+  {
+    height:95%;
+    position: relative;
+    right: 5%;
+    background-color: black;
+  }
 /* Device Holds*/
 #H1,#H2,#H5,#H6{
   height:17vh;
@@ -29,12 +63,12 @@ grid-template-areas:
   height: 5vh;
   width: 20vh;
   
-  
 }
 /*2nd and 3rd line*/
 #H9,#H10,#H11,#H12,#H13,#H14,#H15,#H16,#H17,#H18,#H19,#H20,#H21,#H22,#H23,#H23,#H24,#H25,#H26
 {
   height: 15vh;
+
 }
 /*Mono*/
 #H10,#H16,#H19,#H25{width: 10vh;}
@@ -63,6 +97,7 @@ grid-template-areas:
 }
 #H2 {
   grid-area: H2;
+ 
 }
 #H3 {
   grid-area: H3;
@@ -139,22 +174,8 @@ margin-left: 12%;
 #H25 {grid-area: H25;}
 #H26 {grid-area: H26;}
 
-.SmallSquareImg{
-  position: relative;
-  height: 150%;
-  width: 100%;
- 
-}
-.BigSquareImg
-{
-  height:95%;
-  position: relative;
-  right: 5%;
-  
-}
-.OneFingersImg{width: 80%;}
-.TwoFingersImg{width: 90%;}
-.ThreeFingersImg{width: 100%;}
+
+
 #Img16{
   position: relative;
   right:50%;
@@ -172,6 +193,7 @@ margin-left: 12%;
 #Img19{
   position: relative;
   top:30%;
+  
 }
 #Img11,#Img12,#Img14,#Img15,#Img15,#Img20,#Img21,#Img23,#Img24{
   position: relative;

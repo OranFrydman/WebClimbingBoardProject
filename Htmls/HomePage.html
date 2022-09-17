@@ -14,44 +14,46 @@
         <div class="GridSettings" id="Header">
                 <nav>
                     <ul class="HomeItems">
-                        <span id="time"></span>
-                        <li><a href="#" onclick="ShowDiv('LoginPage')">Sign in</a></li>
-                        <li><a href="#" onclick="ShowDiv('RegisterPage')">Register</a></li>
-                        <li><a href="#" onclick="ShowDiv('About')">About us</a></li>
+                        <input id="menu-toggle" type="checkbox" />
+                        <label class='menu-button-container' for="menu-toggle">
+                        <div class='menu-button'></div>
+                      </label>
+                        <ul class="menu">
+                            <li><a  onclick="ShowDiv('LoginPage')">Sign in</a></li>
+                            <li><a  onclick="ShowDiv('RegisterPage')">Register</a></li>
+                            <li><a  onclick="ShowDiv('About')">About us</a></li>
+                        </ul>
+                        <li><span id="time"></span></li>
+                        <li><a href="HomePage.html">Home</a></li> 
+                        <li><a href="Workout.html">Workout</a></li> 
                         <li><a href="Statistics.html">My Climbs</a></li> 
                     </ul>
                 </nav>
         </div>
         <div id="LetsGo">
-            <div class="flip-box">
-                <div class="flip-box-inner">
-                  <div class="flip-box-front">
-                    <a href="./Workout.html">
-                        <img src="/Imgs/LetsGo.png" alt="LetsGo">
-                     </a>  
-                  </div>
-                </div>
-            </div>
+            <a href="Workout.html">
+                <button href="Workout.html" type="button" id="LetsGoButton">Lets Go</button> 
+            </a>
         </div>
         <div class="GridSettings" id="About">
             <input type="button" class="CloseWindow" id="CloseRegis" onclick="HideDiv('About')" value="X"/>
             <br>
             <h2>Hello There!</h2>
-            <div>I am a student from Ben Gurion University with passion for rock climbing </div>
-            <div>I decided to take the HangBoard application one step up and create my own Endurance trainer.</div>
-            <div>This Application had been developed as part of Web Development Course during Summer 2022.</div>
-            <div>During covid and in general students can't go outdoors.</div>
-            <div>ClimbingBoard is an application who provides unknown suprising and challanging in-home climbing. </div>
+            <div>I am a student from Ben Gurion University with a passion for rock climbing </div>
+            <div>I have decided to take the HangBoard application one step forward and create my own endurance trainer.</div>
+            <div>This application was developed as part of a Web Development Course during the summer of 2022.</div>
+            <div>During the Covid19 pandemic climbing outdoors was not possible.</div>
+            <div>ClimbingBoard is an application which provides an unknown suprising and challanging in-home climbing. </div>
         </div>
         <div class="GridSettings" id="LoginPage">
                 <input type="button" class="CloseWindow" id="CloseRegis" onclick="HideDiv('LoginPage')" value="X"/>
                     <div class="Forms"> 
                         <h2>Login</h2>
                         <form action="" method="">
-                            <label for="UserEmail">Email</label>
-                            <input type="email" name="UserEmail" id="UserEmail">  <br>
-                            <label for="Password">Password</label>
-                            <input type="password" name="Password" id="Password">  <br><br><br>
+                            <label for="LoginUserEmail">Email</label>
+                            <input type="email" name="LoginUserEmail" id="LoginUserEmail">  <br>
+                            <label for="LoginPassword">Password</label>
+                            <input type="password" name="LoginPassword" id="LoginPassword">  <br><br><br>
                             <input type="button" id="Login" value="Login"/>  
                         </form>
                         <br><br><br>

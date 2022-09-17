@@ -2,21 +2,23 @@
 {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
   font-size:17px;
+  font-weight: bold;
   
 }
 
 :root{
-    --FormColor1:rgba(237,184,121,0.5);
+    --FormColor1:rgba(237,184,121,0.8);
+    --FormColor2:rgba(189, 27, 243, 0.8);
     --GreenButton:#04AA6D;
     --GreyButton:#a7a7a7;
 }
 .Forms{
   text-align: right; 
-
 }
 .Forms label{
   float: left;
 }
+
 a {
   position: relative;
   }
@@ -27,20 +29,21 @@ nav{
 }
 nav ul li {
 display: inline;
-padding-left: 20px;
+padding-left: 60px;
 
 }
 nav ul li a {
 text-decoration: none;
 color:black
+
 }
 ul li a::before {
 content: '';
 position: absolute;
 width: 100%;
-height: 3px;
+height: 3px;  
 border-radius: 2px;
-background-color: #18272F;
+background-color: Black;
 bottom: 0;
 left: 0;
 transform-origin: right;
@@ -66,111 +69,103 @@ img {
       line-height: 2em;
       
       
+      
     }
-    .CloseWindow{
-      background-image: linear-gradient(160deg, red, white);
-      padding:0.2px 10px;
-    }
+  
       /* Home Page*/
     #HomePage{
         background: url(../Imgs/HomeBackGround.JPG);
         background-repeat: no-repeat;
         background-size: cover;
         height:auto;
+        width:auto;
 
     }
     #LetsGo{
     width: 55%;
     margin-top: 20px;
+    
   }
+  
   #LetsGoImg:hover {
     width:80%;
     margin-top: 20%;
     margin-right: 20%;
   }
-    /* Container Grid */   
+  .CloseWindow{
+    background-image: linear-gradient(160deg, red, white);
+    padding:0.2px 10px;
+  }
+  #Register:hover,#Login:hover{
+    background-color: var(--GreyButton);
+   }
+    /* Home Grid */ 
+      
 #container
 {
 display: grid;
 grid-template-areas: 
 'Header Header Header Header LetsGo'
-'About About . RegisterPage  LoginPage';
+'About About  RegisterPage RegisterPage  LoginPage';
 }
 .GridSettings{
     border-style: solid;
     border-radius: 25px;
-    margin: 60px;
-    padding: 5px;
-    font-size: 15px;
+    margin: 40px;
     background:var(--FormColor1);
-    font-weight: bold;
 }
 #Header {
     grid-area: Header;
     height: auto;   
+    width: auto;
+    padding-top:3%;
+    
 }
 #About {
     grid-area: About;
     height: auto;
     margin-top: 6em;
-    line-height: 1.4;
-    width: 80%; 
+    line-height: 1.5;
+    width: 90%; 
 }
 #RegisterPage {
   grid-area: RegisterPage;
   height: auto;
+  width:auto;
   margin-top: 10em;
 }
 #LoginPage {
   grid-area: LoginPage;
   height: auto;
+  width:auto;
   margin-top: 12em;
   
 }
 #Register,#Login{
  width: 100%;
 }
-#Register:hover,#Login:hover{
-  background-color: var(--GreyButton);
- }
+
 #StatPage{
         background: url(../Imgs/StatisticBackGround.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height:100%;
     }
-/* The flip box container */
-.flip-box {
-  perspective: 1000px; /*  3D effect */
-}
-.flip-box-inner {
-  transition: transform 1.5s;
-  transform-style: preserve-3d;
-}
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(360deg);
-}
-/* Position the front and back side */
-.flip-box-front, .flip-box-back {
-  -webkit-backface-visibility: hidden; 
-  backface-visibility: hidden;
-}
 /* WORKOUT PAGE*/
 #WorkoutPage{
     background: url(../Imgs/WorkoutBackGround.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height:100%;
+    height:auto;
 }
 #containerWorkOut
 {
 display: grid;
 grid-template-areas: 
 'Header Header Header'
-'Grades Grades Time '
+'Grades StartStop Time '
 'Device Device Device'
-'StartStop StartStop StartStop';
+
 }
 /* Grid Workout*/
 #Grades {
@@ -186,8 +181,6 @@ grid-template-areas:
   border: 1px solid black;
   grid-area: Device;
   height: 60vh;
-  width:auto;
-  text-align:center;
   background: url(../Imgs/FingerBoardAlpineStylePic.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -215,14 +208,22 @@ font-size:80px;
   
 }
 
-#StartStopButton
+#StartStopButton,#LetsGoButton
 {
   height: 100px;
   width: 100px;
   border-radius: 50%;
   border: 1px solid Black;
   background-image: linear-gradient(30deg, lightgreen, white); 
-  
+  cursor: pointer;
+}
+#LetsGoButton
+{
+  animation: Sizeup 2s 2s 5  ease-in-out;
+}
+#StartStopButton
+{
+  float: left;
 }
 #reset{
   height: 40px;
@@ -231,7 +232,6 @@ font-size:80px;
   border: 1px solid Black;
   background-image: linear-gradient(30deg, Yellow, white); 
   position: relative;
-  left:25%;
 }
 /*Stats Page*/
 #containerStat
@@ -240,31 +240,30 @@ display: grid;
 grid-template-areas: 
 'Header Header Header Header LetsGo'
 'Table Table . . Filters '
-'GraphCount GraphResults . . Filters'
+'GraphCount GraphCount GraphResults GraphResults  Filters'
+'GraphCount GraphCount GraphResults GraphResults  Filters'
 ;
 }
-/* Grid Workout*/
+/* Grid Stats*/
 
 #Table {
   grid-area: Table;
-  height: 40vh;
+  height: auto;
+  width: auto;
   position:relative;
   left: 30%;
 }
 #Filters {
   grid-area: Filters;
-  height: 50vh;
-  width: 40vh;
+  width: auto;
   border: black solid 1px;
-  margin-top :28%;
+  
   height: auto;
 }
 #FilterLogo{
-  width: 50px;
-  position:relative;
-  left:50%;
-  bottom:25%;
-  
+  width:30%;
+  height: auto;
+  float: right;
 }
 .input-group
 {
@@ -272,18 +271,19 @@ grid-template-areas:
   word-spacing: 12px;
 }
 #unified-inputs.input-group { width: 100%; }
-#unified-inputs.input-group input { width: 50% !important; }
+#unified-inputs.input-group input { width: 50%  }
 #unified-inputs.input-group input:last-of-type { border-left: 0; }
 #GraphCount {
   grid-area: GraphCount;
-  height: 30vh;
+  height: auto;
   text-align:center;
   border: black solid 1px;
   
 }
 #GraphResults {
   grid-area: GraphResults;
-  height: 30vh;
+  height: auto;
+  width: auto;
   border: black solid 1px;
  
  
@@ -293,7 +293,8 @@ grid-template-areas:
 .HistoryClimb {
   border-collapse: collapse;
   font-size: 0.9em;
-  min-width: 400px;
+  min-width: auto;
+  height: auto;
   box-shadow: 0 0 30px black;
  
   
@@ -321,3 +322,123 @@ grid-template-areas:
 }
 
 
+
+
+/*More*/
+
+@keyframes Sizeup {
+  0% { width: 100px;}
+  50% { width: 115px; height:115px; color: blue; font-size:20px;}
+  100% { width: 100px; }
+}
+
+@media screen and (max-width: 1000px) {
+  .GridSettings {
+    background:var(--FormColor2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .GridSettings {
+    background:var(--FormColor1);
+  }
+}
+
+.Active {
+  border: blue 3px dotted; 
+  border-radius: 25px;
+  
+  
+}
+
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  cursor: pointer;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: black;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width:20%;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    width:20%;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: black;
+    background-color: var(--FormColor1);
+    cursor: pointer;
+  }
+  

@@ -74,7 +74,7 @@ img {
   
       /* Home Page*/
     #HomePage{
-        background: url(../Imgs/HomeBackGround.JPG);
+        background: url(../MEDIA/HomeBackGround.JPG);
         background-repeat: no-repeat;
         background-size: cover;
         height:auto;
@@ -127,14 +127,17 @@ grid-template-areas:
     margin-top: 6em;
     line-height: 1.5;
     width: 90%; 
+    
 }
 #RegisterPage {
+  visibility: hidden;
   grid-area: RegisterPage;
   height: auto;
   width:auto;
   margin-top: 10em;
 }
 #LoginPage {
+  visibility: hidden;
   grid-area: LoginPage;
   height: auto;
   width:auto;
@@ -146,14 +149,14 @@ grid-template-areas:
 }
 
 #StatPage{
-        background: url(../Imgs/StatisticBackGround.jpg);
+        background: url(../MEDIA/StatisticBackGround.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         height:100%;
     }
 /* WORKOUT PAGE*/
 #WorkoutPage{
-    background: url(../Imgs/WorkoutBackGround.jpg);
+    background: url(../MEDIA/WorkoutBackGround.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height:auto;
@@ -178,10 +181,10 @@ grid-template-areas:
   height: auto;
 }
 #Device {
-  border: 1px solid black;
+ 
   grid-area: Device;
   height: 60vh;
-  background: url(../Imgs/FingerBoardAlpineStylePic.png);
+  background: url(../MEDIA/FingerBoardAlpineStylePic.png);
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotate(0.6deg);
@@ -351,7 +354,7 @@ grid-template-areas:
   
 }
 
-
+/*3 lines menu*/
 .menu > li {
   margin: 0 1rem;
   overflow: hidden;

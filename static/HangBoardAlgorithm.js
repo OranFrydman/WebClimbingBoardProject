@@ -76,13 +76,13 @@ function mainTime()
     let s = second < 10 ? "0" + second : second;
     timerRef.innerHTML = ` ${m} : ${s} `;
 
-    
+// change hold every X seconds 
     if(second%4==0)
     {
         ChangeHold();
     }
 }
-
+//Choosing grades
     var level;
    level=0;
     const easy_btn = document.getElementById('Easy');
@@ -124,7 +124,7 @@ document.getElementById('Hard').addEventListener('click', ()=>
 const [H1,H2,H3,H4,H5,H6,H7,H8,H10,H11,H12,H13,H14,H15,H16,H18,H19,H20,H21,H22,H23,H24,H25,H26]=[7,7,8,8,7,7,4,6,2,4,3,10,3,4,2,5,1,2,3,7,3,2,1,5];
 var [H9,H17]=[4,4];
 const ArrayHolds = [H1,H2,H3,H4,H5,H6,H7,H8,H9,H10,H11,H12,H13,H14,H15,H16,H17,H18,H19,H20,H21,H22,H23,H24,H25,H26];
-const [MaxEasy,MaxMed,MaxHard]= [14,6,1];
+const [MaxEasy,MaxMed,MaxHard]= [10,6,1];
 const MaxScore = [MaxEasy,MaxMed,MaxHard];
 var [leftH,rightH]=[H9,H17];
 var [leftI,rightI]=[8,16];
